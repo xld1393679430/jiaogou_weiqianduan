@@ -57,10 +57,10 @@
   jQuery.fn.init.prototype = jQuery.fn;
 
   jQuery.extend({
-    isPlainObjecy: function(obj) {
+    isPlainObjecy: function (obj) {
       return toString.call(obj) === "[object Object]";
     },
-    isArray: function() {
+    isArray: function (obj) {
       return toString.call(obj) === "[object Array]";
     },
   });
