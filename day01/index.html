@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h1>设计模式 jQuery源码分析 -- Jquery.extend</h1>
+    </div>
+	<script src="./myJquery.js"></script>
+    <script>
+      
+
+      const obj1 = {
+        name: 1,
+        list: {
+          name: "a",
+        },
+      };
+      const obj2 = {
+        name: 2,
+        list: {
+          name: "b",
+          sex: "男",
+        },
+      };
+
+      //1， 任意扩展对象（浅拷贝）
+    //   const newObj = $.extend({}, obj1, obj2);
+    //   console.log("--newObj:", newObj);
+
+      //2， 任意扩展对象（深拷贝）
+    //   const newDeepObj = $.extend(true, {}, obj1, obj2);
+    //   consoel.log("--newDeepObj:", newDeepObj);
+
+      // 3,Jquery本身扩展
+      $.extend({
+        work: function () {
+          alert("work");
+        },
+      });
+
+	  console.log($, 2222)
+      $.work();
+
+      // 4 实例对象扩展
+      $.fn.extend({
+        msg: "hello",
+      });
+
+	  console.log("--$().sex", $().sex)
+    </script>
+  </body>
+</html>
